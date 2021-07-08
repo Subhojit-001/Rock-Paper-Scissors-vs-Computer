@@ -1,78 +1,83 @@
 import random
 
-a = 1
-d = 0
-w = 0
-l = 0
+rounds = 1
+drawScore = 0
+winScore = 0
+lostScore = 0
 
-while a <= 5:
+print("Welcome to Rock Paper Scissor v/s Computer")
+print("There will be 5 round in total\n")
 
+while rounds <= 5:
+
+    print(f"Round {rounds} begins...")
     lst = ["Rock", "Paper", "Scissor"]
-    c = random.choice(lst)
+    computerChoice = random.choice(lst)
 
-    n = input("Choose Rock, Paper, or Scissor\n")
-    n = n.capitalize()
+    userChoice = input("Choose Rock, Paper, or Scissor\n")
+    userChoice = userChoice.capitalize()
 
-    if c == "Rock":
-        if n == "Rock":
-            print(f"Computer Choose {c}")
+    if computerChoice == "Rock":
+        if userChoice == "Rock":
+            print(f"Computer Choose {computerChoice}")
             print("Draw")
-            d += 1
+            drawScore += 1
 
-        elif n == "Paper":
-            print(f"Computer Choose {c}")
+        elif userChoice == "Paper":
+            print(f"Computer Choose {computerChoice}")
             print("You Win")
-            w += 1
+            winScore += 1
 
-        elif n == "Scissor":
-            print(f"Computer Choose {c}")
+        elif userChoice == "Scissor":
+            print(f"Computer Choose {computerChoice}")
             print("You Loose")
-            l += 1
+            lostScore += 1
 
         else:
             print("Wrong Input")
 
-    elif c == "Paper":
-        if n == "Paper":
-            print(f"Computer Choose {c}")
+    elif computerChoice == "Paper":
+        if userChoice == "Paper":
+            print(f"Computer Choose {computerChoice}")
             print("Draw")
-            d+=1
+            drawScore += 1
 
-        elif n == "Scissor":
-            print(f"Computer Choose {c}")
+        elif userChoice == "Scissor":
+            print(f"Computer Choose {computerChoice}")
             print("You Win")
-            w+=1
+            winScore += 1
 
-        elif n == "Rock":
-            print(f"Computer Choose {c}")
+        elif userChoice == "Rock":
+            print(f"Computer Choose {computerChoice}")
             print("You Loose")
-            l+=1
+            lostScore += 1
 
         else:
             print("Wrong Input")
 
     else:
-        if n == "Scissor":
-            print(f"Computer Choose {c}")
+        if userChoice == "Scissor":
+            print(f"Computer Choose {computerChoice}")
             print("Draw")
-            d+=1
+            drawScore += 1
 
-        elif n == "Rock":
-            print(f"Computer Choose {c}")
+        elif userChoice == "Rock":
+            print(f"Computer Choose {computerChoice}")
             print("You Win")
-            w+=1
+            winScore += 1
 
-        elif n == "Paper":
-            print(f"Computer Choose {c}")
+        elif userChoice == "Paper":
+            print(f"Computer Choose {computerChoice}")
             print("You Loose")
-            l+=1
+            lostScore += 1
 
         else:
             print("Wrong Input")
 
-    a+=1
+    rounds += 1
+    print("\n\n")
 
-
-print(f"\n\nYou win {w} times")
-print(f"You loose {l} time")
-print(f"You draw {d} time")
+print("SCORE BOARD")
+print(f"\n\nPLAYER WIN - {winScore} OUT OF 5")
+print(f"COMPUTER WIN - {lostScore} OUT OF 5")
+print(f"MATCH DRAW -  {drawScore} OUT OF 5")
